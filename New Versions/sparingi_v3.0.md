@@ -98,13 +98,13 @@ Koordynator (szkółka)
 > dziecko↔drużyna to nowy byt budowany od zera, nie rozszerzenie istniejącego.
 
 ### Do ustalenia
-
-- TR-05: Czy trener widzi opłaty nakładane przez koordynatora? Wstępnie: **nie widzi nic** związanego z opłatami — do potwierdzenia.
-- Czy trener może być przypisany maksymalnie do **jednego** koordynatora (założenie robocze: tak)?
-- Czy trener może **sam opuścić szkółkę** (odpiąć się od koordynatora), czy tylko koordynator może go usunąć?
-- **Zakres danych dziecka widocznych dla trenera** (dane osobowe małoletnich — RODO): tylko imię, nazwisko, rocznik, czy również dane kontaktowe rodzica?
-- Czy po odrzuceniu zgłoszenia (TR-03) rodzic może ponawiać prośbę **bez limitu**, czy potrzebna blokada/limit ponowień (ochrona przed spamem)?
-- Czy wszystkie drużyny trenera są **automatycznie widoczne w wyszukiwarce rodzica** (RO-04), czy trener decyduje, które drużyny są wyszukiwalne? Dziś drużyny są prywatnymi danymi trenera.
+- !!!!!! może być więcej niż jeden kordynatorw szkółce, realny przypadek - jeden kordynator i tak będzie masterem
+- TR-05: Czy trener widzi opłaty nakładane przez koordynatora? Wstępnie: **nie widzi nic** związanego z opłatami — do potwierdzenia. (zgdza się, tylko kordynator widzi płatnosci)
+- Czy trener może być przypisany maksymalnie do **jednego** koordynatora (założenie robocze: tak)? (tak nawet między klubami!!!)
+- Czy trener może **sam opuścić szkółkę** (odpiąć się od koordynatora), czy tylko koordynator może go usunąć? (informacja tylko dla trenera, że jak cos nie gra to mail do sparingów)
+- **Zakres danych dziecka widocznych dla trenera** (dane osobowe małoletnich — RODO): tylko imię, nazwisko, rocznik, czy również dane kontaktowe rodzica? (praktycznie wszystko) RODO
+- Czy po odrzuceniu zgłoszenia (TR-03) rodzic może ponawiać prośbę **bez limitu**, czy potrzebna blokada/limit ponowień (ochrona przed spamem)? ( bez limitu bo bęzi ełatwiej)
+- Czy wszystkie drużyny trenera są **automatycznie widoczne w wyszukiwarce rodzica** (RO-04), czy trener decyduje, które drużyny są wyszukiwalne? Dziś drużyny są prywatnymi danymi trenera. -  nie ma sensu, wszystkie widoczne  dla rodziców
 
 ### Kolejny etap (poza wyceną etapu 1)
 
@@ -193,12 +193,12 @@ trenerów obecnych w aplikacji.
 
 ### Pytania otwarte
 
-- Czy e-mail potwierdzający rejestrację / przypomnienie hasła ma być taki sam jak obecnie dla trenera? Jeśli tak — trzeba go **uczynić bardziej generycznym**, bo obecna treść mówi o organizacji sparingów.
-- (z TR-03) Czy prośba o dołączenie dziecka wymaga akceptacji trenera, czy dziecko od razu trafia na listę drużyny ze statusem „czeka na akceptację"?
-- **Dwoje rodziców jednego dziecka** (mama i tato, osobne konta): czy dziecko może być powiązane z dwoma kontami rodziców, czy jedno dziecko = jedno konto rodzica? Jeśli jedno — ryzyko duplikatów (każdy rodzic definiuje „swoje" dziecko niezależnie). Założenie robocze na etap 1: **jedno dziecko = jedno konto rodzica**.
-- Czy subskrypcja jest **per konto rodzica** (dowolna liczba dzieci w cenie 5 zł), czy per dziecko? Założenie robocze: per konto.
-- **Usunięcie konta rodzica** (funkcja już istnieje dla trenera): co z dziećmi (odpięcie z drużyn + powiadomienie trenera) i z subskrypcją — subskrypcji w sklepie **nie da się anulować z backendu**, rodzic musi to zrobić sam; ekran usuwania konta musi o tym wyraźnie informować.
-- Czy rodzic i trener to **rozłączne typy kont**? Trener będący jednocześnie rodzicem musiałby mieć dwa konta (dwa e-maile). Założenie robocze na etap 1: rozłączne.
+- Czy e-mail potwierdzający rejestrację / przypomnienie hasła ma być taki sam jak obecnie dla trenera? Jeśli tak — trzeba go **uczynić bardziej generycznym**, bo obecna treść mówi o organizacji sparingów. - zostawić taki sam tylko zroibc bardziej ogólny
+- (z TR-03) Czy prośba o dołączenie dziecka wymaga akceptacji trenera, czy dziecko od razu trafia na listę drużyny ze statusem „czeka na akceptację"? - tylko powiadomie i wtedy decyduje ale pasuej żeby widizał gdzies na liscie ze to dziecko czeka oczkeuje/odrzucone.
+- **Dwoje rodziców jednego dziecka** (mama i tato, osobne konta): czy dziecko może być powiązane z dwoma kontami rodziców, czy jedno dziecko = jedno konto rodzica? Jeśli jedno — ryzyko duplikatów (każdy rodzic definiuje „swoje" dziecko niezależnie). Założenie robocze na etap 1: **jedno dziecko = jedno konto rodzica**. - udostępnienie dziecka drugiemu rodzicowi!!!
+- Czy subskrypcja jest **per konto rodzica** (dowolna liczba dzieci w cenie 5 zł), czy per dziecko? Założenie robocze: per konto. - per konto!!!!
+- **Usunięcie konta rodzica** (funkcja już istnieje dla trenera): co z dziećmi (odpięcie z drużyn + powiadomienie trenera) i z subskrypcją — subskrypcji w sklepie **nie da się anulować z backendu**, rodzic musi to zrobić sam; ekran usuwania konta musi o tym wyraźnie informować. 
+- Czy rodzic i trener to **rozłączne typy kont**? Trener będący jednocześnie rodzicem musiałby mieć dwa konta (dwa e-maile). Założenie robocze na etap 1: rozłączne. zgadza się (obadać czy da się na jednym mailu to pomyslenia ale moze tryby profilu)
 
 ### Kolejny etap (poza wyceną etapu 1)
 
@@ -246,13 +246,18 @@ Profil koordynatora szkółki piłkarskiej — zarządza trenerami i opłatami w
   c) koordynator **ręcznie wskazuje**, która składka obowiązuje. Nigdy suma.
   Rekomendacja: wariant c) z podpowiedzią wyższej kwoty — szkółki mają różne polityki,
   a ręczna decyzja koordynatora pokrywa wszystkie przypadki.
+  - tylko, płaci tylko jedną składkę w klubie!! 99% te składki są takie same, satwka wyższa, decyzja kordynatora
+
 - Opłaty **jednorazowe** (turniej, obóz) są przypisane do konkretnej drużyny/wydarzenia —
   te mogą wystąpić równolegle z różnych drużyn i **nie podlegają deduplikacji**
-  (dziecko jedzie na dwa obozy = dwie opłaty).
+  (dziecko jedzie na dwa obozy = dwie opłaty). TAK
+  
 - Moment naliczenia składki przy dołączeniu w trakcie miesiąca: pełna kwota, proporcjonalnie,
   czy od kolejnego okresu? Analogicznie: czy opuszczenie drużyny w trakcie okresu przerywa
   naliczanie od kolejnego cyklu? A przy zmianie drużyny na droższą/tańszą w trakcie okresu —
   od kiedy obowiązuje nowa kwota?
+- kordynator steruje kiedy stawka rusza (wakcje od skłądek uwzględnić od kiedy do kiedy, wybór meisiecy dnia, możliwosc nałożenia ręcznego) 
+  
 - (z KO-08) Indywidualna kwota przy składce **cyklicznej**: obowiązuje we wszystkich
   kolejnych cyklach do odwołania (założenie robocze), czy tylko w bieżącym? Czy koordynator
   może zmienić indywidualną kwotę także **po** akceptacji (ze skutkiem od kolejnego cyklu)?
